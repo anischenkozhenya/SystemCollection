@@ -11,6 +11,18 @@ namespace Task2
     
     class Program
     {
+        static List<Buyer> GetUserByProduct(Dictionary<Buyer, List<Product>> dictionary, Product product)
+        {
+            List<Buyer> buyers = new List<Buyer>();
+            foreach (var item in dictionary)
+            {
+                if (item.Value.Contains(product))
+                {
+                    buyers.Add(item.Key);
+                }
+            }
+            return buyers;
+        }
 
         static void Main(string[] args)
         {
@@ -33,6 +45,7 @@ namespace Task2
                 Console.WriteLine("");
             }
             Console.WriteLine(new string('-', 20));
+
             var user = GetUserByProduct(dictionary, Product.Alcohol);
             foreach (var item in user)
             {
@@ -40,21 +53,6 @@ namespace Task2
             }
             Console.ReadKey();
         }
-        static List<Buyer> GetUserByProduct(Dictionary<Buyer, List<Product>> dictionary, Product product)
-        {
-            List<Buyer> buyers = new List<Buyer>();
-            foreach (var item in dictionary)
-            {
-                foreach (var list in item.Value)
-                {
-                    if (product==list)
-                    {
-                        buyers.Add(item.Key);
-                    }
-                }
-
-            }
-            return buyers;
-        }
+        
     }
 }
