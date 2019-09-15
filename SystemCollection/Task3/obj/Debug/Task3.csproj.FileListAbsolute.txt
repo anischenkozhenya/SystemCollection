@@ -1,0 +1,7 @@
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\bin\Debug\Task3.exe.config
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\bin\Debug\Task3.exe
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\bin\Debug\Task3.pdb
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\obj\Debug\Task3.exe
+E:\SystemCollection\SystemCollection\SystemCollection\Task3\obj\Debug\Task3.pdb
