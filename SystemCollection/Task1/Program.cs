@@ -14,20 +14,21 @@ namespace Task1
         static void Main(string[] args)
         {
             var sort = new SortedList();
-            sort["First"] = "1st";
-            sort["Second"] = "2nd";
-            sort["Third"] = "3rd";
-            sort["Fourth"] = "4th";
+            sort["white"] = "#FFFFFF";
+            sort["silver"] = "#C0C0C0";
+            sort["gray"] = "#808080";
+            sort["black"] = "000000";
 
             foreach (DictionaryEntry item in sort)
             {
                 Console.WriteLine("{0} {1}",item.Key ,item.Value);
             }
-            sort = new SortedList(new DescCompare());
-            sort["First"] = "1st";
-            sort["Second"] = "2nd";
-            sort["Third"] = "3rd";
-            sort["Fourth"] = "4th";
+
+            sort = new SortedList();
+            sort["white"] = "#FFFFFF";
+            sort["silver"] = "#C0C0C0";
+            sort["gray"] = "#808080";
+            sort["black"] = "000000";
 
             foreach (DictionaryEntry item in sort)
             {
@@ -35,11 +36,18 @@ namespace Task1
             }
             Console.ReadKey();
         }
+        /// <summary>
+        /// Класс для сравнения объектов,Icomparer - предоставляет метод для сравнения
+        /// </summary>
         public class DescCompare : IComparer
         {
+            /// <summary>
+            /// Сравнивает два объекта без учета регистра строк
+            /// </summary>
             CaseInsensitiveComparer comparer = new CaseInsensitiveComparer();
             public int Compare(object x, object y)
             {
+                //y & x меняем местами для убывания
                 return comparer.Compare(y,x);
             }
         }
