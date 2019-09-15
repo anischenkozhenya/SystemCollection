@@ -30,7 +30,7 @@ namespace Task3
             foreach (var item in corp2)
             {
                 Console.WriteLine("{0} {1} млн$", item.Key, item.Value);
-            }
+            }            
             Console.ReadKey();
         }
     }
